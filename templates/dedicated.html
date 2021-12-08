@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>view kitchen in full</h1>
+
+<h3>Kitchen: {{kitchen.name}}</h3>
+<h3>Location: {{kitchen.location}}</h3>
+
+<h4>This kitchens volunteers:</h4>
+{% for volunteer in volunteers %}
+{% if volunteer.kitchen == kitchen.name %}
+<h5>{{ volunteer.name }}</h5>
+{% endif %}
+{% endfor %}
+
+<a href="{{ url_for('index') }}">[back]</a>
+
+{% endblock %}

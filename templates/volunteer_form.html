@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Become a volunteer</h1>
+<div class="form-group">
+<form action="{{ url_for('add_volunteer') }}" method="POST">
+    <label for="name">Name</label>
+    <input class="form-control" type="text" id="name" name="name" placeholder="your name here">
+    <label for="email">Email address</label>
+    <input class="form-control" type="text" id="email" name="email" placeholder="your email here">
+    <label for="kitchen">Kitchen (move to kitchen page)</label>
+    <input class="form-control" type="text" id="kitchen" name="kitchen" placeholder="Volunteers kitchen here">
+    <label for="password">password</label>
+    <input class="form-control" type="text" id="password" name="password" placeholder="your password here">
+    <button class="btn btn-primary" type="submit">Volunteer!</button>
+    </div>
+</form>
+</div>
+
+{% endblock %}

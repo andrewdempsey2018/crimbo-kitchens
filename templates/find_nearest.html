@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<h1>Find your nearest kitchen</h1>
+
+<p id="demo">aasa</p>
+
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+
+{% block location_script %}
+<!-- location script file -->
+<script src="../static/js/location.js"></script>
+{% endblock %}
+{% endblock %}
